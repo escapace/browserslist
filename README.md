@@ -1,1 +1,1 @@
-# browserslist
+# typescript-library-starter
