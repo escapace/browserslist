@@ -1,7 +1,7 @@
 import { build } from 'esbuild'
 import { type Targets, transform } from 'lightningcss'
 import { assert, describe, it } from 'vitest'
-import { browserslistToTargets } from '.'
+import { browserslist } from '.'
 
 export const minify = (value: string, targets: Targets) => {
   const { code } = transform({
@@ -16,21 +16,21 @@ export const minify = (value: string, targets: Targets) => {
 
 describe('./src/index.spec.ts', () => {
   it('type checks', () => {
-    const { browserslist, esbuild, lightningcss } = browserslistToTargets({
+    const { browsers, esbuild, lightningcss } = browserslist({
       queries: '> 0.00001%',
     })
 
     assert.isArray(esbuild)
-    assert.isArray(browserslist)
+    assert.isArray(browsers)
     assert.isObject(lightningcss)
 
     esbuild.forEach((value) => assert.isString(value))
     Object.entries(lightningcss).forEach(([_, value]) => assert.isNumber(value))
-    Object.entries(browserslist).forEach(([_, value]) => assert.isString(value))
+    Object.entries(browsers).forEach(([_, value]) => assert.isString(value))
   })
 
   it('lightningcss', () => {
-    const targets = browserslistToTargets({
+    const targets = browserslist({
       queries: '>= 0.25%',
     })
 
@@ -47,7 +47,7 @@ describe('./src/index.spec.ts', () => {
   })
 
   it('esbuild', async () => {
-    const targets = browserslistToTargets({
+    const targets = browserslist({
       queries: 'last 2 versions and not dead and fully supports es6-module',
     })
 

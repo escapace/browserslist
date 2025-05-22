@@ -1,4 +1,4 @@
-import browserslist from 'browserslist'
+import _browserslist from 'browserslist'
 
 // import type { Targets as LightningcssTargetsOption } from 'lightningcss'
 export interface LightningcssTargetsOption {
@@ -15,7 +15,7 @@ export interface LightningcssTargetsOption {
 
 export type LightningcssTargets = keyof LightningcssTargetsOption
 
-interface Options extends browserslist.Options {
+interface Options extends _browserslist.Options {
   queries?: string | readonly string[] | null
 }
 
@@ -154,16 +154,16 @@ const semver = (version: number): number[] => [
   version & 0xff,
 ]
 
-export const browserslistToTargets = (
+export const browserslist = (
   options: Options,
 ): {
-  browserslist: string[]
+  browsers: string[]
   esbuild: string[]
   lightningcss: Record<LightningcssTargets, number | undefined>
 } => {
   const { queries, ...browserslistOptions } = options ?? {}
 
-  const browsers = browserslist(
+  const browsers = _browserslist(
     queries,
     Object.entries(browserslistOptions).length === 0 ? undefined : browserslistOptions,
   )
@@ -202,7 +202,7 @@ export const browserslistToTargets = (
     .filter((value): value is string => value !== undefined)
 
   return {
-    browserslist: browsers,
+    browsers,
     esbuild: esbuildTargets,
     lightningcss: lightningcssTargets,
   }
