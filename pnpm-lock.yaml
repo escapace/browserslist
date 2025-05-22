@@ -9,7 +9,7 @@ importers:
   .:
     dependencies:
       browserslist:
-        specifier: ^4.24.5
+        specifier: '>=4.24.5'
         version: 4.24.5
     devDependencies:
       '@commitlint/cli':
