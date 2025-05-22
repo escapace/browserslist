@@ -7,9 +7,6 @@
     "email": "opensource@escapace.com"
   },
   "bugs": "https://github.com/escapace/browserslist/issues",
-  "dependencies": {
-    "browserslist": "^4.24.5"
-  },
   "devDependencies": {
     "@commitlint/cli": "19.8.1",
     "@commitlint/config-conventional": "19.8.1",
@@ -46,6 +43,9 @@
   "homepage": "https://github.com/escapace/browserslist#readme",
   "license": "MPL-2.0",
   "module": "lib/neutral/index.js",
+  "peerDependencies": {
+    "browserslist": ">=4.24.5"
+  },
   "pnpm": {
     "onlyBuiltDependencies": [
       "esbuild",
