@@ -1,4 +1,9 @@
-import _browserslist from 'browserslist'
+import _browserslist from 'browserslist-rs'
+
+// eslint-disable-next-line typescript/no-explicit-any
+type SecondParameter<T> = T extends (first: any, second: infer S, ...rest: any[]) => any ? S : never
+
+type BrowserslistOptions = Exclude<SecondParameter<typeof _browserslist>, undefined>
 
 // import type { Targets as LightningcssTargetsOption } from 'lightningcss'
 export interface LightningcssTargetsOption {
@@ -15,8 +20,8 @@ export interface LightningcssTargetsOption {
 
 export type LightningcssTargets = keyof LightningcssTargetsOption
 
-interface Options extends _browserslist.Options {
-  queries?: string | readonly string[] | null
+interface Options extends BrowserslistOptions {
+  queries: string | string[]
 }
 
 type BrowserlistTargets =

@@ -44,7 +44,7 @@
   "license": "MPL-2.0",
   "module": "lib/neutral/index.js",
   "peerDependencies": {
-    "browserslist": ">=4.24.5"
+    "browserslist-rs": ">=0.11.0"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
