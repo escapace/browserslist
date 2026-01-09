@@ -15,6 +15,16 @@ export const minify = (value: string, targets: Targets) => {
 }
 
 describe('./src/index.spec.ts', () => {
+  it('baseline', () => {
+    const { browsers, esbuild, lightningcss } = browserslist({
+      queries: 'baseline widely available or last 2 versions and not dead',
+    })
+
+    esbuild.forEach((value) => assert.isString(value))
+    Object.entries(lightningcss).forEach(([_, value]) => assert.isNumber(value))
+    Object.entries(browsers).forEach(([_, value]) => assert.isString(value))
+  })
+
   it('type checks', () => {
     const { browsers, esbuild, lightningcss } = browserslist({
       queries: '> 0.00001%',
