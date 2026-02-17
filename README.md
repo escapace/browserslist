@@ -1,12 +1,8 @@
 # @escapace/browserslist
 
-Core takeaway: `@escapace/browserslist` resolves a Browserslist query and returns targets for esbuild and lightningcss.
-
-Why it matters: build pipelines often need one auditable browser support policy that can be reused across JavaScript and CSS build steps.
+Resolves browserslist query into a browser/version list and targets for esbuild and lightningcss.
 
 ## Install
-
-`browserslist` is a peer dependency.
 
 ```sh
 pnpm add @escapace/browserslist browserslist
@@ -16,10 +12,10 @@ pnpm add @escapace/browserslist browserslist
 
 `browserslist(options)` accepts:
 
-- `queries`: a Browserslist query string or query list. This field is optional.
-- All upstream Browserslist options via `Options`, including options used with `.browserslistrc` and the `browserslist` field in `package.json`.
+- `queries`: a browserslist query string or query list. This field is optional.
+- All upstream browserslist options via `Options`, including options used with `.browserslistrc` and the `browserslist` field in `package.json`.
 
-When `queries` is omitted, Browserslist applies its normal configuration and defaults.
+When `queries` is omitted, browserslist applies its normal configuration and defaults.
 
 ## Usage
 
@@ -42,7 +38,7 @@ console.log(targets.lightningcss)
 
 `browserslist(options)` returns:
 
-- `browsers`: the resolved browser/version list from Browserslist. This list is the baseline for audits and debugging.
+- `browsers`: the resolved browser/version list from browserslist. This list is the baseline for audits and debugging.
 - `esbuild`: target strings intended for esbuild’s `target` option.
 - `lightningcss`: targets object intended for lightningcss’s `targets` option.
 
