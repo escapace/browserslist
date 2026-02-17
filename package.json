@@ -8,27 +8,27 @@
   },
   "bugs": "https://github.com/escapace/browserslist/issues",
   "devDependencies": {
-    "@commitlint/cli": "20.3.0",
-    "@commitlint/config-conventional": "20.3.0",
-    "@escapace/pnpm-pack": "0.6.1",
+    "@commitlint/cli": "20.4.1",
+    "@commitlint/config-conventional": "20.4.1",
+    "@escapace/pnpm-pack": "0.6.3",
     "@ls-lint/ls-lint": "2.3.1",
-    "@vitest/coverage-v8": "4.0.16",
-    "esbuild": "0.27.2",
+    "@vitest/coverage-v8": "4.0.18",
+    "esbuild": "0.27.3",
     "eslint": "9.39.2",
-    "eslint-config-escapace": "5.10.2",
-    "esroll": "1.1.1",
-    "knip": "5.79.0",
-    "lefthook": "2.0.13",
-    "lightningcss": "1.30.2",
-    "prettier": "3.7.4",
+    "eslint-config-escapace": "5.12.0",
+    "esroll": "1.1.2",
+    "knip": "5.83.1",
+    "lefthook": "2.1.0",
+    "lightningcss": "1.31.1",
+    "prettier": "3.8.1",
     "prettier-config-escapace": "1.2.1",
     "syncpack": "13.0.4",
     "tsx": "4.21.0",
     "typescript": "5.9.3",
-    "vitest": "4.0.16"
+    "vitest": "4.0.18"
   },
   "engines": {
-    "pnpm": ">=10.27.0"
+    "pnpm": ">=10.29.2"
   },
   "exports": {
     ".": {

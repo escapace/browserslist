@@ -20,6 +20,10 @@ describe('./src/index.spec.ts', () => {
       queries: 'baseline widely available or last 2 versions and not dead',
     })
 
+    assert.isNotEmpty(esbuild)
+    assert.isNotEmpty(lightningcss)
+    assert.isNotEmpty(browsers)
+
     esbuild.forEach((value) => assert.isString(value))
     Object.entries(lightningcss).forEach(([_, value]) => assert.isNumber(value))
     Object.entries(browsers).forEach(([_, value]) => assert.isString(value))

@@ -109,7 +109,7 @@ function parseVersion(version: string): number | undefined {
     .split('.')
     .map((v) => parseInt(v, 10))
 
-  if (isNaN(major) || isNaN(minor) || isNaN(patch)) {
+  if (Number.isNaN(major) || Number.isNaN(minor) || Number.isNaN(patch)) {
     return undefined
   }
 
