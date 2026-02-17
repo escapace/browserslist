@@ -1,6 +1,14 @@
 import _browserslist from 'browserslist'
 
 // import type { Targets as LightningcssTargetsOption } from 'lightningcss'
+
+/**
+ * Represents lightningcss target constraints keyed by browser family.
+ *
+ * @remarks
+ * This shape matches the `targets` option accepted by lightningcss.
+ * It is returned by {@link browserslist} under the `lightningcss` field.
+ */
 export interface LightningcssTargetsOption {
   android?: number
   chrome?: number
@@ -13,9 +21,23 @@ export interface LightningcssTargetsOption {
   samsung?: number
 }
 
+/**
+ * Defines the set of browser keys supported by {@link LightningcssTargetsOption}.
+ */
 export type LightningcssTargets = keyof LightningcssTargetsOption
 
-interface Options extends _browserslist.Options {
+/**
+ * Describes the input accepted by {@link browserslist}.
+ *
+ * @remarks
+ * This interface extends the upstream Browserslist options and adds an optional `queries` field.
+ *
+ * @see https://github.com/browserslist/browserslist#api
+ */
+export interface Options extends _browserslist.Options {
+  /**
+   * Browserslist query or query list used to resolve the target browser set.
+   */
   queries?: string | readonly string[] | null
 }
 
@@ -154,6 +176,26 @@ const semver = (version: number): number[] => [
   version & 0xff,
 ]
 
+/**
+ * Resolves a browser support policy and provides targets for esbuild and lightningcss.
+ *
+ * @remarks
+ * The support policy is expressed as a Browserslist query.
+ * The result includes:
+ *
+ * - `browsers`: the resolved browser/version list returned by Browserslist.
+ *
+ * - `esbuild`: target strings suitable for esbuild’s `target` option.
+ *
+ * - `lightningcss`: a targets object suitable for lightningcss’s `targets` option.
+ *
+ * @param options - Browserslist query and options.
+ * @returns Resolved browsers and tool-specific target formats.
+ *
+ * @see https://github.com/browserslist/browserslist
+ * @see https://esbuild.github.io/api/#target
+ * @see https://lightningcss.dev
+ */
 export const browserslist = (
   options: Options,
 ): {
