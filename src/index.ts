@@ -30,7 +30,7 @@ export type LightningcssTargets = keyof LightningcssTargetsOption
  * Describes the input accepted by {@link browserslist}.
  *
  * @remarks
- * This interface extends the upstream Browserslist options and adds an optional `queries` field.
+ * This interface extends the upstream browserslist options and adds an optional `queries` field.
  *
  * @see https://github.com/browserslist/browserslist#api
  */
@@ -180,16 +180,16 @@ const semver = (version: number): number[] => [
  * Resolves a browser support policy and provides targets for esbuild and lightningcss.
  *
  * @remarks
- * The support policy is expressed as a Browserslist query.
+ * The support policy is expressed as a browserslist query.
  * The result includes:
  *
- * - `browsers`: the resolved browser/version list returned by Browserslist.
+ * - `browsers`: the resolved browser/version list returned by browserslist.
  *
  * - `esbuild`: target strings suitable for esbuild’s `target` option.
  *
  * - `lightningcss`: a targets object suitable for lightningcss’s `targets` option.
  *
- * @param options - Browserslist query and options.
+ * @param options - browserslist query and options.
  * @returns Resolved browsers and tool-specific target formats.
  *
  * @see https://github.com/browserslist/browserslist

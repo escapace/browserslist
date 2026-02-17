@@ -13,7 +13,7 @@ pnpm add @escapace/browserslist browserslist
 `browserslist(options)` accepts:
 
 - `queries`: a browserslist query string or query list. This field is optional.
-- All upstream browserslist options via `Options`, including options used with `.browserslistrc` and the `browserslist` field in `package.json`.
+- All upstream browserslist options.
 
 When `queries` is omitted, browserslist applies its normal configuration and defaults.
 
@@ -64,7 +64,7 @@ browserslist: (options: Options) => {
 
 | Parameter | Type                                                          | Description                     |
 | --------- | ------------------------------------------------------------- | ------------------------------- |
-| `options` | <pre>[Options](#interface-options- 'interface Options')</pre> | Browserslist query and options. |
+| `options` | <pre>[Options](#interface-options- 'interface Options')</pre> | browserslist query and options. |
 
 ### Returns
 
@@ -72,9 +72,9 @@ Resolved browsers and tool-specific target formats.
 
 ### Remarks
 
-The support policy is expressed as a Browserslist query. The result includes:
+The support policy is expressed as a browserslist query. The result includes:
 
-- `browsers`: the resolved browser/version list returned by Browserslist.
+- `browsers`: the resolved browser/version list returned by browserslist.
 - `esbuild`: target strings suitable for esbuild’s `target` option.
 - `lightningcss`: a targets object suitable for lightningcss’s `targets` option.
 
@@ -100,7 +100,7 @@ export interface Options extends _browserslist.Options
 
 ### Remarks
 
-This interface extends the upstream Browserslist options and adds an optional `queries` field.
+This interface extends the upstream browserslist options and adds an optional `queries` field.
 
 ### Options.queries
 
