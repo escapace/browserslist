@@ -19,8 +19,8 @@ importers:
         specifier: 20.4.1
         version: 20.4.1
       '@escapace/pnpm-pack':
-        specifier: 0.6.3
-        version: 0.6.3(@pnpm/logger@5.2.0)
+        specifier: 0.7.0
+        version: 0.7.0(@pnpm/logger@5.2.0)
       '@ls-lint/ls-lint':
         specifier: 2.3.1
         version: 2.3.1
@@ -34,11 +34,11 @@ importers:
         specifier: 9.39.2
         version: 9.39.2(jiti@2.6.1)
       eslint-config-escapace:
-        specifier: 5.12.0
-        version: 5.12.0(@typescript-eslint/parser@8.55.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)(vitest@4.0.18(@types/node@25.2.3)(jiti@2.6.1)(lightningcss@1.31.1)(tsx@4.21.0)(yaml@2.8.2))
+        specifier: 5.12.1
+        version: 5.12.1(@typescript-eslint/parser@8.55.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)(vitest@4.0.18(@types/node@25.2.3)(jiti@2.6.1)(lightningcss@1.31.1)(tsx@4.21.0)(yaml@2.8.2))
       esroll:
-        specifier: 1.1.2
-        version: 1.1.2(@types/node@25.2.3)
+        specifier: 1.1.5
+        version: 1.1.5(@types/node@25.2.3)
       knip:
         specifier: 5.83.1
         version: 5.83.1(@types/node@25.2.3)(typescript@5.9.3)
@@ -52,8 +52,8 @@ importers:
         specifier: 3.8.1
         version: 3.8.1
       prettier-config-escapace:
-        specifier: 1.2.1
-        version: 1.2.1
+        specifier: 1.2.2
+        version: 1.2.2
       syncpack:
         specifier: 13.0.4
         version: 13.0.4(typescript@5.9.3)
@@ -328,8 +328,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@escapace/pnpm-pack@0.6.3':
-    resolution: {integrity: sha512-OZjrZvBaf6EtXFbqdNp5BUq/kRsGMjrlCSvsQBrmV7p8ZrJKMWBb9xtWgzrgvyzn6I1s9mk2UGGhFXVGqu36Ew==}
+  '@escapace/pnpm-pack@0.7.0':
+    resolution: {integrity: sha512-k0gnUpnZcN+PO3HVmx+SbQaFjwEk/WwL9KHo+yRW08JlNZDMLJf25k7QBniatmt4rnh0XRiO5OQxkIXCpEzg/A==}
     engines: {node: '>=24.13.0', pnpm: '>=10.29.2'}
     hasBin: true
 
@@ -1439,8 +1439,8 @@ packages:
     peerDependencies:
       eslint: '>=6.0.0'
 
-  eslint-config-escapace@5.12.0:
-    resolution: {integrity: sha512-rodZ9VnDg5QHsiq4xmck9gAq3qK/csvBw4pOupwtM8/Mjayw1zoOAPAatSY4GzlhrdwGaXpIqASNZHzsSiGD6w==}
+  eslint-config-escapace@5.12.1:
+    resolution: {integrity: sha512-1cW5kH5708zu+EtwMDQE8HYpMqk7tKjyjmCViRi/9iLc3O7Uz/8+1jXYgccvOCMxaJ7FubnJjK85CfpjdPN1Xw==}
     engines: {node: '>=24.13.0', pnpm: '>=10.29.2'}
     peerDependencies:
       eslint: '>=9.39.2 <10'
@@ -1599,8 +1599,8 @@ packages:
     resolution: {integrity: sha512-KmfKL3b6G+RXvP8N1vr3Tq1kL/oCFgn2NYXEtqP8/L3pKapUA4G8cFVaoF3SU323CD4XypR/ffioHmkti6/Tag==}
     engines: {node: '>=4.0'}
 
-  esroll@1.1.2:
-    resolution: {integrity: sha512-Xam9agH0PpEtKt8n1w2dX+EwnTol7fDssRbwUfvBLo7lluYkV97w+PpGjNIVFstR6hm6x3CM6eQH1edAYbIH7w==}
+  esroll@1.1.5:
+    resolution: {integrity: sha512-+75sj2VRMjJhVLKBM8Yq+ycpyUdNlRwkpfM2J4otKpXD1cL6YtzQgZMWQnFLg3w32aP7d7G5X3oiSn2exnoXhw==}
     engines: {node: '>=24.13.0', pnpm: '>=10.29.2'}
 
   estraverse@5.3.0:
@@ -2506,8 +2506,9 @@ packages:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
 
-  prettier-config-escapace@1.2.1:
-    resolution: {integrity: sha512-piOy4gQTfKum5UV8vnjdB3Ap0sCFtaOvTbo956JXOfpzrTONKb+hM5IO9APweRJPRv8cQFcoRD4hLmWSknJ0ng==}
+  prettier-config-escapace@1.2.2:
+    resolution: {integrity: sha512-taCRdqpCvU5QO5lFBbd07RhTMTUvuW74fq7bjPQwn+KRf2DP3Z38bV6d+AQ1UDVklQf8o6eIB1ACJ6r4IdF5ag==}
+    engines: {pnpm: '>=10.29.2'}
 
   prettier@3.8.1:
     resolution: {integrity: sha512-UOnG6LftzbdaHZcKoPFtOcCKztrQ57WkHDeRD9t/PTQtmT0NHSeWWepj6pS0z/N7+08BHFDQVUrfmfMRcZwbMg==}
@@ -3288,7 +3289,7 @@ snapshots:
   '@esbuild/win32-x64@0.27.3':
     optional: true
 
-  '@escapace/pnpm-pack@0.6.3(@pnpm/logger@5.2.0)':
+  '@escapace/pnpm-pack@0.7.0(@pnpm/logger@5.2.0)':
     dependencies:
       '@pnpm/lockfile-file': 9.1.3(@pnpm/logger@5.2.0)
       arg: 5.0.2
@@ -4396,7 +4397,7 @@ snapshots:
       eslint: 9.39.2(jiti@2.6.1)
       semver: 7.7.4
 
-  eslint-config-escapace@5.12.0(@typescript-eslint/parser@8.55.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)(vitest@4.0.18(@types/node@25.2.3)(jiti@2.6.1)(lightningcss@1.31.1)(tsx@4.21.0)(yaml@2.8.2)):
+  eslint-config-escapace@5.12.1(@typescript-eslint/parser@8.55.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)(vitest@4.0.18(@types/node@25.2.3)(jiti@2.6.1)(lightningcss@1.31.1)(tsx@4.21.0)(yaml@2.8.2)):
     dependencies:
       '@stylistic/eslint-plugin': 5.8.0(eslint@9.39.2(jiti@2.6.1))
       '@typescript-eslint/utils': 8.55.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)
@@ -4660,7 +4661,7 @@ snapshots:
     dependencies:
       estraverse: 5.3.0
 
-  esroll@1.1.2(@types/node@25.2.3):
+  esroll@1.1.5(@types/node@25.2.3):
     dependencies:
       '@microsoft/api-extractor': 7.56.3(@types/node@25.2.3)
       '@microsoft/api-extractor-model': 7.32.2(@types/node@25.2.3)
@@ -5649,7 +5650,7 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  prettier-config-escapace@1.2.1: {}
+  prettier-config-escapace@1.2.2: {}
 
   prettier@3.8.1: {}
 
