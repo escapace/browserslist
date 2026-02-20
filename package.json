@@ -11,6 +11,7 @@
     "@commitlint/cli": "20.4.1",
     "@commitlint/config-conventional": "20.4.1",
     "@escapace/pnpm-pack": "0.7.0",
+    "@escapace/syncpack-configuration": "0.1.0",
     "@ls-lint/ls-lint": "2.3.1",
     "@vitest/coverage-v8": "4.0.18",
     "esbuild": "0.27.3",
@@ -18,11 +19,11 @@
     "eslint-config-escapace": "5.12.1",
     "esroll": "1.1.5",
     "knip": "5.83.1",
-    "lefthook": "2.1.0",
+    "lefthook": "2.1.1",
     "lightningcss": "1.31.1",
     "prettier": "3.8.1",
     "prettier-config-escapace": "1.2.2",
-    "syncpack": "13.0.4",
+    "syncpack": "14.0.0",
     "tsx": "4.21.0",
     "typescript": "5.9.3",
     "vitest": "4.0.18"
@@ -44,7 +45,7 @@
   "license": "MPL-2.0",
   "module": "lib/neutral/index.js",
   "peerDependencies": {
-    "browserslist": ">=4.28.1"
+    "browserslist": "^4.28.1"
   },
   "private": false,
   "publishConfig": {
@@ -59,7 +60,7 @@
     "ls-lint": "ls-lint --config .ls-lint.yaml",
     "pack": "pnpm-pack package --pack-destination lib",
     "prepare": "lefthook install",
-    "syncpack": "syncpack fix-mismatches && syncpack set-semver-ranges && syncpack format",
+    "syncpack": "syncpack fix && syncpack format",
     "test": "vitest --no-watch --coverage",
     "typecheck": "tsc --noEmit",
     "update": "ncu --cooldown 7 -p pnpm -u --peer --dep dev,peer,prod,optional && pnpm run syncpack"
