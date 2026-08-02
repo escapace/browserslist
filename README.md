@@ -1,6 +1,6 @@
 # @escapace/browserslist
 
-Resolves browserslist query into a browser/version list and targets for esbuild and lightningcss.
+Resolves browserslist query into a browser/version list and targets for esbuild, lightningcss, and Oxc.
 
 ## Install
 
@@ -32,6 +32,7 @@ console.log(targets.browsers)
 // Derived targets for tool configuration.
 console.log(targets.esbuild)
 console.log(targets.lightningcss)
+console.log(targets.oxc)
 ```
 
 ## Behavior and output
@@ -41,22 +42,24 @@ console.log(targets.lightningcss)
 - `browsers`: the resolved browser/version list from browserslist. This list is the baseline for audits and debugging.
 - `esbuild`: target strings intended for esbuild’s `target` option.
 - `lightningcss`: targets object intended for lightningcss’s `targets` option.
+- `oxc`: target strings intended for Oxc transformer’s `target` option.
 
 Notes:
 
-- `esbuild` and `lightningcss` are tool-specific formats and may omit browser families that cannot be represented for that tool.
+- `esbuild`, `lightningcss`, and `oxc` are tool-specific formats and may omit browser families that cannot be represented for that tool.
 
 # API
 
-## function browserslist [↗](src/index.ts#L199-L251 'browserslist')
+## function browserslist [↗](src/index.ts#L256-L281 'browserslist')
 
-Resolves a browser support policy and provides targets for esbuild and lightningcss.
+Resolves a browser support policy and provides targets for esbuild, lightningcss, and Oxc.
 
 ```typescript
 browserslist: (options: Options) => {
   browsers: string[];
   esbuild: string[];
   lightningcss: Record<LightningcssTargets, number | undefined>;
+  oxc: string[];
 }
 ```
 
@@ -77,6 +80,7 @@ The support policy is expressed as a browserslist query. The result includes:
 - `browsers`: the resolved browser/version list returned by browserslist.
 - `esbuild`: target strings suitable for esbuild’s `target` option.
 - `lightningcss`: a targets object suitable for lightningcss’s `targets` option.
+- `oxc`: target strings suitable for Oxc transformer’s `target` option.
 
 ## interface LightningcssTargetsOption [↗](src/index.ts#L12-L22 'LightningcssTargetsOption')
 
